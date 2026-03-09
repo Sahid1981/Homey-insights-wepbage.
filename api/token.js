@@ -1,5 +1,4 @@
 
-// api/token.js
 export default async function handler(req, res) {
   try {
     const tokenRes = await fetch("https://api.homey.app/oauth2/token", {
@@ -7,8 +6,8 @@ export default async function handler(req, res) {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams({
         grant_type: "client_credentials",
-        client_id: process.env.client_id,    
-        client_secret: process.env.client_secret
+        client_id: process.env.CLIENT_ID,    
+        client_secret: process.env.CLIENT_SECRET
       }),
     });
 
