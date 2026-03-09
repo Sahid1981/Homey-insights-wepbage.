@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     const tokenRes = await fetch(`${req.headers.origin}/api/token`);
     const tokenData = await tokenRes.json();
 
-    const url = `${process.env.HOMEY_BASE_URL}/api/manager/insights/log/
+    const url = `${process.env.homey_base_url}/api/manager/insights/log/
       homey:device:YOUR_DEVICE_ID/
       homey:device:YOUR_DEVICE_ID:measure_temperature/entry?
       resolution=hour`
